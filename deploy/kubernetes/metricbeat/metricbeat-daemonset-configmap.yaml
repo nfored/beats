@@ -75,6 +75,9 @@ data:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       username: ${ELASTICSEARCH_USERNAME}
       password: ${ELASTICSEARCH_PASSWORD}
+      ssl: true
+      cacert: /mnt/secrets-store/tls.crt
+      
 ---
 apiVersion: v1
 kind: ConfigMap
